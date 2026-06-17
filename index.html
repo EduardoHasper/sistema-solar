@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EspaçoCiência | Portal do Sistema Solar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Espaço<span>Ciência</span></h1>
+            <p>Explore os mistérios do nosso sistema planetário através de dados e interatividade.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="filtros-section">
+            <h3>Filtrar Planetas:</h3>
+            <div class="botoes-filtro">
+                <button class="btn-filtro ativo" data-filtro="todos">Todos</button>
+                <button class="btn-filtro" data-filtro="rochoso">Rochosos</button>
+                <button class="btn-filtro" data-filtro="gasoso">Gasosos</button>
+            </div>
+        </section>
+
+        <section class="planetas-grid">
+            <div class="card-planeta" data-tipo="rochoso">
+                <div class="planeta-visual mercurio"></div>
+                <h2>Mercúrio</h2>
+                <p class="tag">Rochoso</p>
+                <p class="descricao">O planeta mais próximo do Sol e o menor do sistema. Não possui luas e sua atmosfera é extremamente tênue.</p>
+                <button class="btn-detalhes" data-info="Temperatura: -173°C a 427°C | Distância do Sol: 57,9 mi km | Curiosidade: Um ano em Mercúrio dura apenas 88 dias terrestres!">Ver Dados</button>
+            </div>
+
+            <div class="card-planeta" data-tipo="rochoso">
+                <div class="planeta-visual venus"></div>
+                <h2>Vênus</h2>
+                <p class="tag">Rochoso</p>
+                <p class="descricao">O planeta mais quente devido a um efeito estufa descontrolado. Gira no sentido horário (oposto à maioria).</p>
+                <button class="btn-detalhes" data-info="Temperatura: ~465°C constante | Distância do Sol: 108,2 mi km | Curiosidade: O Sol nasce no oeste e se põe no leste em Vênus.">Ver Dados</button>
+            </div>
+
+            <div class="card-planeta" data-tipo="rochoso">
+                <div class="planeta-visual terra"></div>
+                <h2>Terra</h2>
+                <p class="tag">Rochoso</p>
+                <p class="descricao">Nosso lar. O único corpo celeste conhecido que abriga vida e possui grandes oceanos de água líquida.</p>
+                <button class="btn-detalhes" data-info="Temperatura: -89°C a 58°C | Distância do Sol: 149,6 mi km | Curiosidade: A atmosfera nos protege de meteoros e das radiações solares nocivas.">Ver Dados</button>
+            </div>
+
+            <div class="card-planeta" data-tipo="rochoso">
+                <div class="planeta-visual marte"></div>
+                <h2>Marte</h2>
+                <p class="tag">Rochoso</p>
+                <p class="descricao">O planeta vermelho. Possui calotas polares de gelo e o maior vulcão do Sistema Solar, o Monte Olimpo.</p>
+                <button class="btn-detalhes" data-info="Temperatura: -143°C a 35°C | Distância do Sol: 227,9 mi km | Curiosidade: Cientistas enviam robôs (rovers) para buscar vestígios de vida antiga nele.">Ver Dados</button>
+            </div>
+
+            <div class="card-planeta" data-tipo="gasoso">
+                <div class="planeta-visual jupiter"></div>
+                <h2>Júpiter</h2>
+                <p class="tag">Gasoso</p>
+                <p class="descricao">O gigante gasoso. É o maior planeta do sistema, tão grande que poderia conter todos os outros planetas dentro de si.</p>
+                <button class="btn-detalhes" data-info="Temperatura: ~ -108°C | Distância do Sol: 778,5 mi km | Curiosidade: A Grande Mancha Vermelha é uma tempestade maior que a Terra que ruge há séculos.">Ver Dados</button>
+            </div>
+
+            <div class="card-planeta" data-tipo="gasoso">
+                <div class="planeta-visual saturno"></div>
+                <h2>Saturno</h2>
+                <p class="tag">Gasoso</p>
+                <p class="descricao">Famoso por seu espetacular e complexo sistema de anéis feitos de pedaços de gelo e rocha espacial.</p>
+                <button class="btn-detalhes" data-info="Temperatura: ~ -139°C | Distância do Sol: 1,43 bi km | Curiosidade: É o planeta menos denso; se houvesse uma piscina gigante, ele flutuaria na água.">Ver Dados</button>
+            </div>
+        </section>
+
+        <section id="painel-central" class="escondido">
+            <div class="painel-conteudo">
+                <h3>📊 Telemetria Espacial</h3>
+                <p id="texto-painel">Selecione um planeta para carregar os dados.</p>
+                <button id="fechar-painel">Fechar Dados</button>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <h2>🛸 Desafio Orbital: Teste seus Conhecimentos</h2>
+            <div class="pergunta">
+                <p><strong>Pergunta:</strong> Qual é o planeta mais quente do Sistema Solar?</p>
+                <div class="alternativas">
+                    <button class="btn-quiz" data-correta="false">Mercúrio</button>
+                    <button class="btn-quiz" data-correta="true">Vênus</button>
+                    <button class="btn-quiz" data-correta="false">Marte</button>
+                </div>
+            </div>
+            <p id="resultado-quiz" class="escondido"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EspaçoCiência - Plataforma Educacional Avançada</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
